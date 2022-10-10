@@ -1,6 +1,6 @@
-import Node, { deserializeBT } from '../Node';
+import Node, { deserializeBT } from "../Node";
 
-describe('deserializes BT correctly', () => {
+describe("deserializes BT correctly", () => {
   const dfs = (node: Node | null, preOrder: number[]): void => {
     if (!node) {
       return;
@@ -11,7 +11,7 @@ describe('deserializes BT correctly', () => {
     dfs(node.right, preOrder);
   };
 
-  it('should correctly work with a raw array', () => {
+  it("should correctly work with a raw array", () => {
     const serializedArray = [3, 9, 7, 2, 6, null, 4];
     const tree = deserializeBT(serializedArray);
 
@@ -23,8 +23,8 @@ describe('deserializes BT correctly', () => {
     expect(preOrder).toStrictEqual([3, 9, 2, 6, 7, 4]);
   });
 
-  it('should work with json array', () => {
-    const stringArray = '[3, 9, 7, 2, 6, null, 4]';
+  it("should work with json array", () => {
+    const stringArray = "[3, 9, 7, 2, 6, null, 4]";
     const tree = deserializeBT(JSON.parse(stringArray));
 
     expect(tree).toMatchSnapshot();
