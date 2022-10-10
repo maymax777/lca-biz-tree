@@ -1,7 +1,7 @@
 # TODO
 
 - [ ] components unit testing
-- [ ] `findLCA` method unit testing 
+- [ ] `findLCA` method unit testing
 - add modern visual effects to trees
 
 # Visualizing "Find the Least Common Ancestor of a Binary Tree"

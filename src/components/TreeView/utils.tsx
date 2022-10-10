@@ -11,13 +11,14 @@ export function renderCustomNode(
     selected?.node1 === +name || selected?.node2 === +name;
   const isLCA: boolean = selected?.lca === +name;
   const selectedStyle: string =
-    (isSelected ? " fill-indigo-300 stroke-gray-100" : "") +
-    (isLCA ? " fill-yellow-600 stroke-gray-100 " : "");
+    (isSelected ? " fill-indigo-300 stroke-gray-100 " : "") +
+    (isLCA ? " fill-yellow-600 stroke-gray-100 " : "") +
+    (!isSelected && !isLCA && " stroke-green-500 fill-white stroke-1 ");
 
   return (
     <g
       className={
-        "stroke-green-500 fill-white stroke-1 hover:stroke-2 hover:stroke-yellow-200 transition-all delay-300" +
+        "hover:stroke-2 hover:stroke-yellow-200 transition-all delay-300" +
         selectedStyle
       }
     >
