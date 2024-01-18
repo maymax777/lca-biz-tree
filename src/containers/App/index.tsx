@@ -53,25 +53,6 @@ function App() {
 
   return (
     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 w-screen h-screen flex flex-col justify-center items-center">
-      <div className="flex flex-col bg-blue-300 m-1 p-2 w-1/3 rounded">
-        <div className="flex flex-row justify-center items-center">
-          <Input inputRef={inputRef} placeholder="All nodes..." />
-          <Button onClick={createTree} label="Create Tree" />
-        </div>
-        <div className="flex flex-row m-2 items-center justify-center">
-          <Input
-            inputRef={node1Ref}
-            placeholder="node 1:"
-            onChange={onNodeInput}
-          />
-          <Input
-            inputRef={node2Ref}
-            placeholder="node 2:"
-            onChange={onNodeInput}
-          />
-        </div>
-      </div>
-      <TreeView tree={tree} selected={selected} />
     </div>
   );
 }
